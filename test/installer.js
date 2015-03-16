@@ -5,12 +5,12 @@ var path = require('path'),
     exec = require('child_process').exec,
     Installer = require('../lib/installer'),
     meta = {
-        repo: 'dim-team/event',
+        repo: 'dim/event',
         version: '0.1.0',
         dependencies: {
-            'dim-team/type': '0.1.0',
-            'dim-team/each': '0.1.0',
-            'dim-team/extend': '0.1.0'
+            'dim/type': '0.1.0',
+            'dim/each': '0.1.0',
+            'dim/extend': '0.1.0'
         }
     };
 

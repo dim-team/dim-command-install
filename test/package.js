@@ -5,7 +5,7 @@ var path = require('path'),
     fs = require('fs'),
     exec = require('child_process').exec,
     Package = require('../lib/package'),
-    repo = 'dim-team/event',
+    repo = 'dim/event',
     ref = 'master',
     remote = 'github',
     pkg;
@@ -19,12 +19,12 @@ describe('Package', function () {
     afterEach(clean);
     beforeEach(function () {
         fs.writeFileSync('component.json', JSON.stringify({
-            repo: 'dim-team/event',
+            repo: 'dim/event',
             version: '0.1.0',
             dependencies: {
-                'dim-team/type': '0.1.0',
-                'dim-team/each': '0.1.0',
-                'dim-team/extend': '0.1.0'
+                'dim/type': '0.1.0',
+                'dim/each': '0.1.0',
+                'dim/extend': '0.1.0'
             }
         }));
         pkg = new Package(repo, '*');
@@ -32,7 +32,7 @@ describe('Package', function () {
 
     it('should initiate instance\'s properties', function () {
         pkg.repo.should.equal(repo);
-        pkg.name.should.equal('dim-team-event');
+        pkg.name.should.equal('dim-event');
         pkg.orgiRef.should.equal(ref);
         pkg.ref.should.equal(ref);
         pkg.root.should.equal(path.resolve('component_modules'));
@@ -45,8 +45,8 @@ describe('Package', function () {
                 meta.should.be.an.Object;
                 pkg.ref.should.equal(meta.version);
                 pkg.remote.name.should.equal(remote);
-                pkg.manifest.should.equal('https://raw.githubusercontent.com/dim-team/event/master/component.json');
-                pkg.archive.should.equal('https://codeload.github.com/dim-team/event/tar.gz/master');
+                pkg.manifest.should.equal('https://raw.githubusercontent.com/dim/event/master/component.json');
+                pkg.archive.should.equal('https://codeload.github.com/dim/event/tar.gz/master');
                 done();
             });
         });
