@@ -1,13 +1,13 @@
 {
   "name": "dim-command-install",
-  "version": "0.1.5-3",
+  "version": "0.1.5-4",
   "description": "a component installer for dim",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dim/dim-command-install.git"
+    "url": "https://github.com/JerroldLee/dim-command-install.git"
   },
   "bugs": {
-    "url": "https://github.com/dim/dim-command-install/issues"
+    "url": "https://github.com/JerroldLee/dim-command-install/issues"
   },
   "main": "index.js",
   "author": "Hinc <hincubus@gmail.com>",

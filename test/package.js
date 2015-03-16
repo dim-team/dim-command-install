@@ -45,8 +45,8 @@ describe('Package', function () {
                 meta.should.be.an.Object;
                 pkg.ref.should.equal(meta.version);
                 pkg.remote.name.should.equal(remote);
-                pkg.manifest.should.equal('https://raw.githubusercontent.com/dim/event/master/component.json');
-                pkg.archive.should.equal('https://codeload.github.com/dim/event/tar.gz/master');
+                pkg.manifest.should.equal('https://raw.githubusercontent.com/JerroldLee/event/master/component.json');
+                pkg.archive.should.equal('https://codeload.github.com/JerroldLee/event/tar.gz/master');
                 done();
             });
         });
